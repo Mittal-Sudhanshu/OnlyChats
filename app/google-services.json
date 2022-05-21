@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "644306798747",
+    "firebase_url": "https://only-chats-4-default-rtdb.firebaseio.com",
+    "project_id": "only-chats-4",
+    "storage_bucket": "only-chats-4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644306798747:android:0d5917f1b234e3c241de3e",
+        "android_client_info": {
+          "package_name": "com.mittal.onlychats"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "644306798747-950009gradh4hq7grq48gag01ft2vimg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABIzRGVBx83HlQBBu42-J03kVsdLS02sY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "644306798747-950009gradh4hq7grq48gag01ft2vimg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
