@@ -21,7 +21,7 @@
         android:text="TextView"
         android:inputType="textLongMessage|textMultiLine"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@id/receiverTime"
+        app:layout_constraintBottom_toTopOf="@id/receiverTime"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0037"
         android:maxWidth="270dp"
