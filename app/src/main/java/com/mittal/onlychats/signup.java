@@ -52,7 +52,7 @@ public class signup extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     dialog.dismiss();
                                     if (task.isSuccessful()){
-                                        Users user=new Users(binding.username.getText().toString(),binding.email.getText().toString(),binding.password.getText().toString());
+                                        Users user=new Users(binding.email.getText().toString(),binding.password.getText().toString(),binding.username.getText().toString());
                                         String id=task.getResult().getUser().getUid();
                                         database.getReference().child("Users").child(id).setValue(user);
                                         Toast.makeText(signup.this,"SignUp Successful",Toast.LENGTH_SHORT).show();

@@ -11,25 +11,35 @@
     android:background="@drawable/bg_reciever"
     android:maxWidth="310dp"
     android:maxHeight="400dp"
-    android:minHeight="30dp"
-    app:layout_constraintGuide_begin="16dp">
+    android:minHeight="30dp">
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/receiverText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
+        android:inputType="textLongMessage|textMultiLine"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/receiverTime"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="26dp" />
+        app:layout_constraintVertical_bias="0.0037"
+        android:maxWidth="270dp"
+        android:minWidth="50dp"
+        app:layout_constraintStart_toEndOf="@id/guideline3" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/receiverTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="12:00PM"
-        tools:layout_editor_absoluteX="248dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline3"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
