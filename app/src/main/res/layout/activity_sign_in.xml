@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/gradientcolor"
     android:gravity="center"
     tools:context=".SignInActivity">
 
@@ -30,18 +31,38 @@
             android:inputType="textPassword"
             android:id="@+id/pass"/>
 
+
+
+
+
     </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/forgotPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password"
+        android:textStyle="bold" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
         android:id="@+id/signin"
-        android:text="SignIn"/>
+        android:shadowRadius="10"
+        android:textColor="#000000"
+        android:background="@drawable/mybutton"
+        android:backgroundTint="@android:color/transparent"
+        android:text="Sign In"
+        android:textAllCaps="false"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
         android:textStyle="bold"
-        android:layout_marginTop="20sp"
+        android:layout_marginTop="7sp"
+        android:textSize="20sp"
         android:text="Create new Account"
         android:id="@+id/createna"/>
 

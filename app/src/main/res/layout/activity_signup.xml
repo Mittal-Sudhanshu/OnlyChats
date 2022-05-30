@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/bg"
+    android:background="@drawable/gradientcolor"
     tools:context=".signup">
 
 
@@ -23,8 +23,8 @@
             android:ems="12"
             android:layout_marginTop="10dp"
             android:hint="Name"
-            android:textStyle="italic|bold"
-            android:textColorHint="#fff"
+            android:textStyle="italic"
+            android:textColorHint="@color/black"
             android:backgroundTint="@android:color/transparent"
             android:id="@+id/username"/>
         <EditText
@@ -32,8 +32,8 @@
             android:layout_height="wrap_content"
             android:ems="12"
             android:layout_marginTop="10dp"
-            android:textStyle="italic|bold"
-            android:textColorHint="#fff"
+            android:textStyle="italic"
+            android:textColorHint="@color/black"
             android:backgroundTint="@android:color/transparent"
             android:hint="Email"
 
@@ -44,8 +44,8 @@
             android:layout_height="wrap_content"
             android:ems="12"
             android:layout_marginTop="10dp"
-            android:textStyle="italic|bold"
-            android:textColorHint="#fff"
+            android:textStyle="italic"
+            android:textColorHint="@color/black"
             android:hint="Password"
             android:inputType="textPassword"
 
@@ -54,23 +54,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="12"
-            android:textColorHint="#fff"
-            android:textStyle="italic|bold"
+            android:textColorHint="@color/black"
+            android:textStyle="italic"
             android:backgroundTint="@android:color/transparent"
             android:layout_marginTop="10dp"
             android:hint="Confirm Password"
             android:inputType="textPassword"
 
             android:id="@+id/Cnfpassword"/>
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:id="@+id/signup"
-            android:textStyle="italic|bold"
-            android:text="SignUp"/>
+
 
     </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/signup"
+        android:textColor="#000000"
+        android:paddingTop="10dp"
+        android:background="@drawable/mybutton"
+        android:backgroundTint="@android:color/transparent"
+        android:textStyle="italic|bold"
+        android:text="SignUp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -79,7 +84,7 @@
         android:id="@+id/alreadyhaveanaccount"
         android:textStyle="bold"
         android:layout_marginTop="10dp"
-        android:textColor="#fff"
+        android:textColor="@color/black"
         android:textSize="15sp"/>
 
 

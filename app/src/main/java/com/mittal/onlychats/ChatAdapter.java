@@ -1,6 +1,7 @@
 package com.mittal.onlychats;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -8,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -25,17 +26,40 @@ public class ChatAdapter extends RecyclerView.Adapter {
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        if (viewType==SENDER_VIEW_TYPE){
+            View view= LayoutInflater.from(context).inflate(R.layout.sample_sender,parent,false);
+            return new SenderViewHolder(view);
+        }
+        else{
+            View view= LayoutInflater.from(context).inflate(R.layout.sample_reciever,parent,false);
+            return new ReceiverViewHolder(view);
+        }
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        if (chatLists.get(position).getuId().equals(FirebaseAuth.getInstance().getUid())){
+            return SENDER_VIEW_TYPE;
+        }
+        else{
+            return RECEIVER_VIEW_TYPE;
+        }
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-
+        ChatList chatList =chatLists.get(position);
+        if (holder.getClass()==SenderViewHolder.class){
+            ((SenderViewHolder)holder).senderMsg.setText(chatList.getMessage());
+        }
+        else{
+            ((ReceiverViewHolder)holder).receiverMsg.setText(chatList.getMessage());
+        }
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return chatLists.size();
     }
 
     public class ReceiverViewHolder extends RecyclerView.ViewHolder {
